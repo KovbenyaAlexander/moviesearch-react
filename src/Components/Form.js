@@ -1,33 +1,44 @@
 import React from "react";
 import asyncGetData from "../redux/actions/thunk/asyncGetData";
+import { changeSearchText } from "../redux/actions/actions";
 import { connect } from "react-redux";
 
-const onChangeHandler = () => {
-  console.log(`++`);
-};
-
-function Form({ asyncGetData }) {
+function Form({ asyncGetData, changeSearchText, searchText }) {
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    asyncGetData();
+    asyncGetData(searchText);
+  };
+
+  const onChangeHandler = (e) => {
+    const searchText = e.target.value;
+    changeSearchText(searchText);
   };
 
   return (
     <form onSubmit={onSubmitHandler}>
       <label>
         Enter movie name:
-        <input type="text" onChange={onChangeHandler} />
+        <input type="text" value={searchText} onChange={onChangeHandler} />
       </label>
       <input type="submit" value="Send" />
     </form>
   );
 }
 
+const mapStateToProps = (state) => {
+  return {
+    searchText: state.searchText,
+  };
+};
+
 const mapDispatchToProps = (dispatch) => {
   return {
-    asyncGetData: () => {
-      dispatch(asyncGetData());
+    asyncGetData: (searchText) => {
+      dispatch(asyncGetData(searchText));
+    },
+    changeSearchText: (text) => {
+      dispatch(changeSearchText(text));
     },
   };
 };
-export default connect(null, mapDispatchToProps)(Form);
+export default connect(mapStateToProps, mapDispatchToProps)(Form);

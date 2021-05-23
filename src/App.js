@@ -1,12 +1,9 @@
 import Form from "./Components/Form";
 
-function App({ inc, dec, counter }) {
+function App() {
   return (
     <div className="App">
       <Form />
-      <button onClick={inc}>+</button>
-      <button onClick={dec}>-</button>
-      {counter}
     </div>
   );
 }

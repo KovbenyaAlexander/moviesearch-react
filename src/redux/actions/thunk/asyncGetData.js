@@ -9,6 +9,7 @@ const asyncGetData = (textForSearch) => {
 
   return (dispatch) => {
     axios.get(URL).then((resp) => {
+      console.log(resp.data.results);
       dispatch(set_data(resp.data.results));
     });
   };
