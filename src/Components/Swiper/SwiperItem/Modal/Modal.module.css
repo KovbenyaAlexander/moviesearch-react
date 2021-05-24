@@ -1,0 +1,7 @@
+.card__modal {
+  position: absolute !important;
+  top: 0px !important;
+  left: 0px !important;
+  width: 200px !important;
+  height: 200px !important;
+}

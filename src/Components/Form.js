@@ -20,7 +20,7 @@ function Form({ asyncGetData, changeSearchText, searchText }) {
         Enter movie name:
         <input type="text" value={searchText} onChange={onChangeHandler} />
       </label>
-      <input type="submit" value="Send" />
+      <input type="submit" value="Search" />
     </form>
   );
 }

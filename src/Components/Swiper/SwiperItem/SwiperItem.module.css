@@ -1,0 +1,9 @@
+.swiper-card {
+  height: 200px;
+}
+
+.swiper__card-reveal {
+  /* width: 85% !important;
+  margin-top: 40px !important; */
+  padding: 0px !important;
+}

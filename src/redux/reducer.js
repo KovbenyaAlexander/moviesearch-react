@@ -2,6 +2,7 @@ import { SET_DATA, CHANGE_SEARCH_TEXT } from "./actions/actionsTypes";
 
 const initialState = {
   searchText: ``,
+  data: null,
 };
 
 export default function reducer(state = initialState, action) {
