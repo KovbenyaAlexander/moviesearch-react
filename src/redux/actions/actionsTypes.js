@@ -1,2 +1,3 @@
 export const SET_DATA = "SET_DATA";
 export const CHANGE_SEARCH_TEXT = "CHANGE_SEARCH_TEXT";
+export const SET_LOADING_STATUS = "SET_LOADING_STATUS";

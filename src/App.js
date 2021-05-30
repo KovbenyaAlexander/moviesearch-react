@@ -1,4 +1,4 @@
-import Form from "./Components/Form";
+import Form from "./Components/Form/Form";
 import Slider from "./Components/Swiper/Swiper";
 import asyncGetData from "./redux/actions/thunk/asyncGetData";
 import { connect } from "react-redux";

@@ -6,8 +6,12 @@
   width: 15px;
 }
 
-.add-info-icon {
-  margin-top: 5px !important;
+.movie-title {
+  font-size: 18px !important;
+}
+
+.card-content {
+  padding: 0px !important;
 }
 
 .card-content__header {
