@@ -2,8 +2,11 @@ import axios from "axios";
 import { set_data, setLoadingStatus } from "../actions";
 
 const asyncGetData = (textForSearch) => {
-  if (!textForSearch) {
-    textForSearch = `Pirates`;
+  if (!textForSearch && !localStorage.getItem("lastRequest")) {
+    localStorage.setItem("lastRequest", JSON.stringify("Matrix"));
+    textForSearch = `Matrix`;
+  } else if (!textForSearch && localStorage.getItem("lastRequest")) {
+    textForSearch = localStorage.getItem("lastRequest");
   }
   const URL = `https://api.themoviedb.org/3/search/multi?api_key=888e6f69f5b71f4265688d6b69d2a141&language=en&query=${textForSearch}`;
 
