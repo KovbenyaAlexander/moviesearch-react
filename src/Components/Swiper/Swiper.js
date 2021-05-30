@@ -11,8 +11,6 @@ import DataNotFound from "../DataNotFound/DataNotFound";
 SwiperCore.use([Navigation, Pagination, Scrollbar]);
 
 function Slider({ data, isLoading }) {
-  console.log(isLoading);
-
   let SwiperSlides = [];
   if (data) {
     SwiperSlides = data.map((item, i) => {
@@ -38,9 +36,8 @@ function Slider({ data, isLoading }) {
           spaceBetween={50}
           navigation
           pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
           breakpoints={{
-            1: {
+            500: {
               slidesPerView: 1,
             },
 
@@ -51,7 +48,7 @@ function Slider({ data, isLoading }) {
             1200: {
               slidesPerView: 3,
             },
-            1400: {
+            1300: {
               slidesPerView: 4,
             },
           }}

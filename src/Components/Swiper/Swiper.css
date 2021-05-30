@@ -1,9 +1,36 @@
-@media screen and (min-width: 130px) {
+@media screen and (min-width: 500px) {
   .swiper-container {
-    width: 70%;
+    width: 300px;
+    height: 300px !important;
   }
 
   .card {
-    height: 90%;
+    height: 94% !important;
   }
+}
+
+@media screen and (min-width: 1000px) {
+  .swiper-container {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .swiper-container {
+    width: 900px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .swiper-container {
+    width: 1200px;
+  }
+}
+
+.swiper-container {
+  height: 600px !important;
+}
+
+.card {
+  height: 90%;
 }

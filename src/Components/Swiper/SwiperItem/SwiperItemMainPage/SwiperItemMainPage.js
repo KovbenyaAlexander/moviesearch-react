@@ -5,8 +5,8 @@ function SwiperItemMainPage({ data }) {
   const posterURL = "https://image.tmdb.org/t/p/w500";
 
   let movieTitle = data.title;
-  if (data.title && data.title.length > 20) {
-    movieTitle = `${data.title.slice(0, 20)}...`;
+  if (data.title && data.title.length > 50) {
+    movieTitle = `${data.title.slice(0, 50)}...`;
   }
   return (
     <>
